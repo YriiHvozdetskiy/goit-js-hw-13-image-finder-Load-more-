@@ -14,7 +14,8 @@ export default class ApiService {
       .then(({ hits }) => {
         this.incrementPage();
         return hits;
-      });
+      })
+      .catch(error => console.log('error', error));
   }
 
   get query() {
